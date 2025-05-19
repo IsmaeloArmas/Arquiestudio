@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#16223c">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARQUIESTUDIO</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+
+</head>
+
+<body>
+  <main>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <img src="images/recursos/ARQUIESTUDIO_ICONO_NEGRO.png" alt="lotipo de ArArquitectura">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Inicio -->
+  <section id="inicio">
+    <div class="logoP">
+      <img src="images/recursos/ARQUIESTUDIO ICONO GRIS.png" alt="lotipo de ArArquitectura">
+    </div>
+    <p>Diseñando espacios inspiradores desde 20XX</p>
+    <a href="#portafolio" class="btn">Ver Portafolio</a>
+  </section>
+
+  <!-- Sección Portafolio -->
+  <section id="portafolio">
+    <h2>Portafolio</h2>
+    <sl-carousel class=".carousel-thumbnails" navigation loop autoplay>
+  <sl-carousel-item>
+    <img
+      alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
+      src="./images/edificios/proyecto.jpeg"
+    />
+  </sl-carousel-item>
+  <sl-carousel-item>
+    <img
+      alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
+      src="./images/edificios/proyecto1.jpeg"
+    />
+  </sl-carousel-item>
+  <sl-carousel-item>
+    <img
+      alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
+      src="./images/edificios/proyecto2.jpeg"
+    />
+  </sl-carousel-item>
+  <sl-carousel-item>
+    <img
+      alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
+      src="./images/edificios/proyecto3.jpeg"
+    />
+  </sl-carousel-item>
+  <sl-carousel-item>
+    <img
+      alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
+      src="./images/edificios/proyecto4.jpeg"
+    />
+  </sl-carousel-item>
+</sl-carousel>
+
+<div class="thumbnails">
+  <div class="thumbnails__scroller">
+    <img alt="Thumbnail by 1" class="thumbnails__image active" src="./images/edificios/proyecto.jpeg" />
+    <img alt="Thumbnail by 2" class="thumbnails__image" src="./images/edificios/proyecto1.jpeg" />
+    <img alt="Thumbnail by 3" class="thumbnails__image" src="./images/edificios/proyecto2.jpeg" />
+    <img alt="Thumbnail by 4" class="thumbnails__image" src="./images/edificios/proyecto3.jpeg" />
+    <img alt="Thumbnail by 5" class="thumbnails__image" src="./images/edificios/proyecto4.jpeg" />
+  </div>
+</div>
+  </section>
+
+  <!-- Sección Sobre Mí -->
+  <section id="sobre-mi">
+    <div class="bio">
+      <img src="images/recursos/Foto.jpeg" alt="Foto del Arquitecto">
+      <div class="texto-bio">
+        <h2>Sobre Mí</h2>
+        <p>¡Hola! Soy Edgardo Armas, arquitecto con 6 años de experiencia especializado en diseño sostenible y espacios funcionales. Mi enfoque combina estética moderna y funcionalidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios Profesionales</h2>
+    <p class="servicios-descripcion">Transformando visiones en espacios funcionales y estéticos</p>
+    
+    <div class="grid-servicios">
+        <!-- Servicio 1 -->
+        <article class="servicio-card">
+            <i class="fas fa-drafting-compass icono-servicio"></i>
+            <h3>Diseño Arquitectónico</h3>
+            <ul class="lista-servicios">
+                <li>Diseños personalizados</li>
+                <li>Planos ejecutivos</li>
+                <li>Renderizados 3D</li>
+                <li>Optimización de espacios</li>
+            </ul>
+        </article>
+
+        <!-- Servicio 2 -->
+        <article class="servicio-card">
+            <i class="fas fa-hard-hat icono-servicio"></i>
+            <h3>Gestión de Proyectos</h3>
+            <ul class="lista-servicios">
+                <li>Supervisión de obra</li>
+                <li>Coordinación de equipos</li>
+                <li>Control de presupuestos</li>
+                <li>Cumplimiento de normativas</li>
+            </ul>
+        </article>
+
+        <!-- Servicio 3 -->
+        <article class="servicio-card">
+            <i class="fas fa-leaf icono-servicio"></i>
+            <h3>Diseño Sustentable</h3>
+            <ul class="lista-servicios">
+                <li>Certificación LEED</li>
+                <li>Eficiencia energética</li>
+                <li>Materiales ecológicos</li>
+                <li>Diseño bioclimático</li>
+            </ul>
+        </article>
+
+        <!-- Servicio 4 -->
+        <article class="servicio-card">
+            <i class="fas fa-city icono-servicio"></i>
+            <h3>Remodelaciones</h3>
+            <ul class="lista-servicios">
+                <li>Reestructuración de espacios</li>
+                <li>Actualización estructural</li>
+                <li>Rehabilitación integral</li>
+                <li>Ampliaciones verticales</li>
+            </ul>
+        </article>
+    </div>
+
+    <a href="#contacto" class="btn-servicios">Solicitar Consultoría</a>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="redes-sociales">
+        <a href="https://www.instagram.com/ar_arquiestudio/" target="_blank" class="icono">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="icono">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="icono">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+      <p>&copy; 2024 ArArquitectura. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JavaScript para el menú móvil (opcional) -->
+  <script>
+      // Cambia el navbar al hacer scroll
+      window.addEventListener('scroll', function() {
+          const header = document.querySelector('header');
+          header.classList.toggle('sticky', window.scrollY > 0);
+      });
+  </script>
+  <script>
+  {
+    const carousel = document.querySelector('.carousel-thumbnails');
+    const scroller = document.querySelector('.thumbnails__scroller');
+    const thumbnails = document.querySelectorAll('.thumbnails__image');
+
+    scroller.addEventListener('click', e => {
+      const target = e.target;
+
+      if (target.matches('.thumbnails__image')) {
+        const index = [...thumbnails].indexOf(target);
+        carousel.goToSlide(index);
+      }
+    });
+
+    carousel.addEventListener('sl-slide-change', e => {
+      const slideIndex = e.detail.index;
+
+      [...thumbnails].forEach((thumb, i) => {
+        thumb.classList.toggle('active', i === slideIndex);
+        if (i === slideIndex) {
+          thumb.scrollIntoView({
+            block: 'nearest'
+          });
+        }
+      });
+    });
+  }
+</script>
+</body>
+</html>
