@@ -97,6 +97,7 @@ section {
 
   #portafolio {
     --slide-aspect-ratio: 3 / 2;
+    min-height: auto;
   }
 
   #portafolio h2 {
@@ -307,34 +308,31 @@ footer {
         margin-top: 15px;
     }
 
+    /* Ajustes generales del carrusel  */
+    /* Ajustes para #portafolio */
+    #portafolio {
+        padding: 20px 0 !important;  /* ↓ Reduce espacio vertical */
+        margin-bottom: 0 !important; /* Elimina margen inferior */
+    }
+
+    /* Carrusel más compacto */
     sl-carousel {
-    --slide-gap: 0.5rem;
     width: 100vw;
-    margin-left: -15px; /* Compensa el padding del contenedor padre */
+    margin: 0 calc(-50vw + 50%) 10px !important; /* Centrado y margen inferior reducido */
     }
 
     sl-carousel img {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 250px; /* Altura mínima para móviles */
-        object-fit: cover;
+        min-height: 250px; /* Altura mínima ajustada */
     }
 
-    /* Thumbnails */
-    .thumbnails__scroller {
-        overflow-x: auto;
-        display: flex;
-        gap: 8px;
-        padding-bottom: 10px; /* Espacio para scroll */
-        flex-wrap: nowrap;
+    /* Ocultar thumbnails (ya lo tienes) */
+    .thumbnails {
+        display: none !important;
     }
 
-    .thumbnails__image {
-        width: 80px !important;
-        height: 60px !important;
-        min-width: 80px; /* Evita que se encojan */
-        object-fit: cover;
-        cursor: pointer;
+    /* Ajusta la siguiente sección (ej: #sobre-mi) */
+    #sobre-mi {
+        padding-top: 10px !important; /* ↓ Reduce espacio arriba */
     }
 
     .bio {
@@ -344,7 +342,7 @@ footer {
     }
 
     .bio img {
-        width: 200px;          /* Tamaño reducido para móvil */
+        width: 200px;          
         height: 200px;
         margin: 0 auto;         /* Centra la imagen horizontalmente */
     }
@@ -373,13 +371,17 @@ footer {
         font-size: 0.9rem;
     }
 
-    sl-carousel img {
-    min-height: 200px; /* Altura más pequeña para móviles muy pequeños */
+    /* Ajustes más agresivos */
+    #portafolio {
+        padding: 15px 0 !important; /* ↓ Menos padding que en tablet */
     }
-    
-    .thumbnails__image {
-        width: 70px !important;
-        height: 50px !important;
+
+    sl-carousel {
+        margin-bottom: 5px !important; /* ↓ Espacio mínimo debajo del carrusel */
+    }
+
+    #sobre-mi {
+    padding-top: 5px !important;
     }
     
     .bio img {

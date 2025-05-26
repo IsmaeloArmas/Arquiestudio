@@ -33,7 +33,7 @@
   <!-- Sección Inicio -->
   <section id="inicio">
     <div class="logoP">
-      <img src="images/recursos/ARQUIESTUDIO ICONO GRIS.png" alt="lotipo de ArArquitectura">
+      <img loading: lazy; src="images/recursos/ARQUIESTUDIO ICONO GRIS.png" alt="lotipo de ArArquitectura">
     </div>
     <p>Diseñando espacios inspiradores desde 2019</p>
     <a href="#portafolio" class="btn">Ver Portafolio</a>
@@ -176,42 +176,8 @@
       <p>&copy; 2024 ArArquitectura. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- JavaScript para el menú móvil (opcional) -->
-  <script>
-      // Cambia el navbar al hacer scroll
-      window.addEventListener('scroll', function() {
-          const header = document.querySelector('header');
-          header.classList.toggle('sticky', window.scrollY > 0);
-      });
-  </script>
-  <script>
-  {
-    const carousel = document.querySelector('.carousel-thumbnails');
-    const scroller = document.querySelector('.thumbnails__scroller');
-    const thumbnails = document.querySelectorAll('.thumbnails__image');
-
-    scroller.addEventListener('click', e => {
-      const target = e.target;
-
-      if (target.matches('.thumbnails__image')) {
-        const index = [...thumbnails].indexOf(target);
-        carousel.goToSlide(index);
-      }
-    });
-
-    carousel.addEventListener('sl-slide-change', e => {
-      const slideIndex = e.detail.index;
-
-      [...thumbnails].forEach((thumb, i) => {
-        thumb.classList.toggle('active', i === slideIndex);
-        if (i === slideIndex) {
-          thumb.scrollIntoView({
-            block: 'nearest'
-          });
-        }
-      });
-    });
-  }
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="main.js"></script>
+  
 </body>
 </html>
