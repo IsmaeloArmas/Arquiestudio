@@ -93,6 +93,11 @@ section {
     font-weight: bold;
 }
 
+.btn:hover {
+    background: transparent;
+    color: #333;
+}
+
 /* Portafolio */
 
   #portafolio {
@@ -182,6 +187,7 @@ section {
     padding: 80px 20px;
     background: #f9f9f9;
     text-align: center;
+    min-height: 50vh;
 }
 
 .grid-servicios {
@@ -238,7 +244,7 @@ section {
 }
 
 .btn-servicios:hover {
-    background: white;
+    background: transparent;
     color: #333;
 }
 
@@ -291,6 +297,22 @@ footer {
     header {
         flex-direction: column;
         padding: 15px;
+        /* Agregamos una transición para que el movimiento sea suave */
+        transition: transform 0.3s ease-in-out;
+        position: fixed; /* Asegura que el header esté fijo en la parte superior */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    }
+
+    /* Esta clase se añadirá/quitará con JavaScript */
+    header.hide-header {
+        transform: translateY(-100%);
+    }
+
+    .logo {
+       
     }
 
     .logoP {
@@ -353,6 +375,14 @@ footer {
 @media (max-width: 480px) {
     section {
         padding: 80px 15px;
+    }
+
+    header.hide-header {
+        transform: translateY(-100%);
+    }
+
+    .logo {
+        display: none;
     }
 
     .logoP {
