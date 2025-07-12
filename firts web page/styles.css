@@ -64,7 +64,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('images/edificios/proyecto6.jpeg') no-repeat center center/cover;
+    background: url('images/edificios/Img/render\ habitación\ ppal.png') no-repeat center center/cover;
     color: #fff;
 }
 
@@ -99,50 +99,44 @@ section {
 }
 
 /* Portafolio */
-
-  #portafolio {
-    --slide-aspect-ratio: 3 / 2;
-    min-height: auto;
-  }
-
-  #portafolio h2 {
+.por {
     width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .thumbnails {
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.por h2 {
     display: flex;
+    align-items: center;
     justify-content: center;
-  }
+}
 
-  .thumbnails__scroller {
+.por ul {
     display: flex;
-    gap: var(--sl-spacing-small);
-    overflow-x: auto;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    scroll-padding: var(--sl-spacing-small);
-  }
+    padding: 0;
+    width: 400%;
+    animation: slide 16s infinite;
+    transition: margin-left 1s ease-in-out;
+}
 
-  .thumbnails__scroller::-webkit-scrollbar {
-    display: none;
-  }
+.por li {
+    list-style: none;
+    width: 100%;
+}
 
-  .thumbnails__image {
-    width: 64px;
-    height: 64px;
+.por img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
+}
 
-    opacity: 0.3;
-    will-change: opacity;
-    transition: 250ms opacity;
-
-    cursor: pointer;
-  }
-
-  .thumbnails__image.active {
-    opacity: 1;
-  }
+@keyframes slide {
+  0%, 20%   { margin-left: 0%; }
+  25%, 45%  { margin-left: -100%; }
+  50%, 70%  { margin-left: -200%; }
+  75%, 95%  { margin-left: -300%; }
+}
 
 /* Sobre mí */
 #sobre-mi {
@@ -330,28 +324,6 @@ footer {
         margin-top: 15px;
     }
 
-    /* Ajustes generales del carrusel  */
-    /* Ajustes para #portafolio */
-    #portafolio {
-        padding: 20px 0 !important;  /* ↓ Reduce espacio vertical */
-        margin-bottom: 0 !important; /* Elimina margen inferior */
-    }
-
-    /* Carrusel más compacto */
-    sl-carousel {
-    width: 100vw;
-    margin: 0 calc(-50vw + 50%) 10px !important; /* Centrado y margen inferior reducido */
-    }
-
-    sl-carousel img {
-        min-height: 250px; /* Altura mínima ajustada */
-    }
-
-    /* Ocultar thumbnails (ya lo tienes) */
-    .thumbnails {
-        display: none !important;
-    }
-
     /* Ajusta la siguiente sección (ej: #sobre-mi) */
     #sobre-mi {
         padding-top: 10px !important; /* ↓ Reduce espacio arriba */
@@ -399,15 +371,6 @@ footer {
 
     nav ul li a {
         font-size: 0.9rem;
-    }
-
-    /* Ajustes más agresivos */
-    #portafolio {
-        padding: 15px 0 !important; /* ↓ Menos padding que en tablet */
-    }
-
-    sl-carousel {
-        margin-bottom: 5px !important; /* ↓ Espacio mínimo debajo del carrusel */
     }
 
     #sobre-mi {
